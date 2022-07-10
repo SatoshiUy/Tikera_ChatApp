@@ -8,28 +8,19 @@ import { getAuth, GoogleAuthProvider } from 'firebase/auth'
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
 const firebaseConfig = {
-  apiKey: "AIzaSyAgnhmG-_BqbmQ3z0KFIo_sbLLfnLF-NUk",
-  authDomain: "chat-app-telegram.firebaseapp.com",
-  projectId: "chat-app-telegram",
-  storageBucket: "chat-app-telegram.appspot.com",
-  messagingSenderId: "673500268667",
-  appId: "1:673500268667:web:9518fe0adc1a277d77fade",
-  measurementId: "G-H7V8L5REP7"
+  apiKey: process.env.NEXT_PUBLIC_APIKEY,
+  authDomain: process.env.NEXT_PUBLIC_AUTHDOMAIN,
+  projectId: process.env.NEXT_PUBLIC_PROJECTID,
+  storageBucket: process.env.NEXT_PUBLIC_STORAGEBUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_MESSAGINGSENDERID,
+  appId: process.env.NEXT_PUBLIC_APPID,
+  measurementId: process.env.NEXT_PUBLIC_MEASUREMENTID
 };
 
-// const firebaseConfig = {
-//   apiKey: process.env.NEXT_PUBLIC_APIKEY,
-//   authDomain: process.env.NEXT_PUBLIC_AUTHDOMAIN,
-//   projectId: process.env.NEXT_PUBLIC_PROJECTID,
-//   storageBucket: process.env.NEXT_PUBLIC_STORAGEBUCKET,
-//   messagingSenderId: process.env.NEXT_PUBLIC_MESSAGINGSENDERID,
-//   appId: process.env.NEXT_PUBLIC_APPID,
-//   measurementId: process.env.NEXT_PUBLIC_MEASUREMENTID
-// };
-
 // Initialize Firebase
-const app = initializeApp(firebaseConfig)
+const app = getApps().length ? getApp() : initializeApp(firebaseConfig)
 
 const db = getFirestore(app);
 
