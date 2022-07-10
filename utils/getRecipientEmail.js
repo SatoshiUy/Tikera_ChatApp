@@ -1,0 +1,1 @@
+export const getRecipientEmail = (conversationUsers, loggedInUser) => conversationUsers.find(userEmail => userEmail !== loggedInUser?.email) 
