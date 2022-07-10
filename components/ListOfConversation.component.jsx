@@ -14,7 +14,10 @@ const ListOfConversation = ({conversationsSnapshot}) => {
 
   const handleRecipientEmailClick = (event, id) => {
     setSelectedRecipientEmail(id);
-    router.push(`/conversations/${id}`)
+    if(id == undefined){
+      router.push('/')
+    }
+    else router.push(`/conversations/${id}`)
   };
 
   useEffect(() =>  {

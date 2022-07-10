@@ -59,7 +59,7 @@ const LoginPage = () => {
           Sign In With Google
         </Button>
         <Button variant="outlined" startIcon={<GitHubIcon />} sx={{marginTop: '50px'}}>
-          <a href='https://github.com/SatoshiUy' target="_blank">SatoshiUy</a>
+          <a href='https://github.com/SatoshiUy'>SatoshiUy</a>
         </Button>
       </StyledLoginContainer>
     </StyledContainer>

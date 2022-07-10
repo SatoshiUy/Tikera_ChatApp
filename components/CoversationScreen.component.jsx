@@ -1,5 +1,5 @@
 import Avatar from '@mui/material/Avatar';
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components';
 import { useRecipient } from '../hooks/useRecipient';
 import { convertFirestoreTimestampToString, generateQueryGetMessages, tranformMessage } from '../utils/getMessagesInConversationId';
@@ -182,6 +182,7 @@ const CoversationScreen = ({conversation, messages}) => {
   
   };
 
+  useEffect(() => scrollToBottom(),[conversation])
   return (
     <>
       <StyledRecipientHeader>
