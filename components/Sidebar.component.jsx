@@ -38,7 +38,7 @@ const StyledContainer = styled.div`
   background-color: rgb(33,33,33);
   color: rgb(170,170,170);
   overflow-y: scroll;
-  border-right: 1px solid whitesmoke;
+  /* border-right: 1px solid whitesmoke; */
   position: relative;
   z-index: 10;
 
@@ -141,7 +141,7 @@ const Sidebar = () => {
         <DialogContent>
           <DialogContentText>
             Please enter a Google email address of someone you want to contact with
-            Ex: uylqse172445@fpt.edu.vn
+            E.g: uylqse172445@fpt.edu.vn
           </DialogContentText>
           <TextField
             autoFocus
