@@ -133,9 +133,9 @@ const Sidebar = () => {
       </StyledHeader>
       <ListOfConversation conversationsSnapshot={conversationsSnapshot}/>
 
-      <StyledSidebarCreateButton onClick={handleClick}>
+      {/* <StyledSidebarCreateButton onClick={handleClick}>
         <CreateIcon style={{ color: "white" }}/>
-      </StyledSidebarCreateButton>
+      </StyledSidebarCreateButton> */}
       <Dialog open={open} onClose={handleClose}>
         <DialogTitle>New Conversation</DialogTitle>
         <DialogContent>

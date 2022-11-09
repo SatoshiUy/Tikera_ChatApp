@@ -60,14 +60,9 @@ const ProfileMenu = () => {
           component="div"
           sx={{ p: '2px 6px', m: '12px', display: 'flex', alignItems: 'center', flexGrow: '1', height: '40px'}}
         >
-          <IconButton type="submit" sx={{ p: '10px' }} aria-label="search">
-            <SearchIcon />
-          </IconButton>
-          <InputBase
-            sx={{ ml: 1, flex: 1 }}
-            placeholder="Search"
-            inputProps={{ 'aria-label': 'search' }}
-          />
+          <div>
+            {loggedInUser.email}
+          </div>
         </Paper>
       </Box>
       <Menu

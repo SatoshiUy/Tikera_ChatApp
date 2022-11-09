@@ -9,6 +9,9 @@ import { useRouter } from 'next/router';
 import Image from 'next/image'
 import EmptyChats from '../assets/EmptyChats.svg'
 import styled from 'styled-components';
+import { useDocument } from 'react-firebase-hooks/firestore';
+import { doc } from 'firebase/firestore';
+import { db } from '../config/firebase';
 
 const StyledEmptyChats = styled.div`
   display: flex;

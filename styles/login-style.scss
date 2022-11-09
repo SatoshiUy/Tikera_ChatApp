@@ -1,0 +1,60 @@
+@import './responsive-styles.scss';
+
+.login-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #daedfe;
+
+  .login-wrapper{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    position: relative;
+    overflow: hidden;
+    width: 1000px;
+    max-width: 100%;
+    padding: 20px;
+    min-height: 100%;
+    @include Responsive(LG) {
+      min-height: 550px;
+      max-height: 80%;
+      padding: 0;
+    }
+  }
+
+  .login-overlay{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1; 
+    // background-image: url('assets/logo/login_background.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #FFFEEB;
+    background-position: 50% 50%;
+  }
+
+  .login-form-button{
+    letter-spacing: 1px;
+    transition: transform 20ms ease-in;
+    cursor: pointer;
+    margin: 8px 0;
+    width: 100%;
+    border-radius: 30px;
+  }
+}
+
+.image_overlay{
+    width: 100%;
+    height: 100%;
+    z-index: 1; 
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.padding-0{
+  padding: 0;
+}
