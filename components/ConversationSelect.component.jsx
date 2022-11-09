@@ -30,7 +30,7 @@ const ConversationSelect = ({id, conversationUsers, selectedRecipientEmail, hand
     <>
       <ListItemButton
         selected={selectedRecipientEmail === id}
-        onClick={(event) => handleRecipientEmailClick(event, id, requirementUsers.randomNumber)}
+        onClick={(event) => handleRecipientEmailClick(event, id)}
         sx={{
           color: 'white',
           "&.Mui-selected": {
